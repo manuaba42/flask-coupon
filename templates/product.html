@@ -1,0 +1,134 @@
+{% extends "index.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/product_style.css">
+
+<div class="wrap">
+    {% for row in data %}
+    <div class="offers">
+        <div class="offer_catalog_wrap">
+            <div class="offer_catalog">
+                <div class="offer_pict">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                </div>
+                <div class="offer_desc">
+                    Name
+                </div>
+                <div class="offer_company">
+                    {{ row.name_brand }}
+                </div>
+                <div class="offer_desc">
+                    Location
+                </div>
+                <div class="offer_company">
+                    {{ row.location }}
+                </div>
+                <div class="offer_desc">
+                    Categories
+                </div>
+                <div class="offer_company">
+                    {% for rowCat in dataCategory %}
+                    {{ rowCat.category }},
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="product_desc">
+                <div class="product_wrap">
+                    <div class="product_about">
+                        <div class="offer_company">
+                            About
+                        </div>
+                        <div class="offer_desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur, enim ultricies
+                            dignissim iaculis, diam magna rhoncus risus, id luctus mi tortor ut justo. Proin pretium
+                            nulla sed enim varius, vitae fringilla nunc accumsan. Donec eget aliquam erat. Ut diam
+                            libero, commodo commodo augue a, malesuada luctus ligula. Donec euismod lacus ante, sed
+                            ultrices mauris fringilla vel. Nam pretium elit sed mi sodales, at venenatis augue
+                            ullamcorper. Nulla euismod rhoncus dignissim. Aliquam consequat risus massa, at aliquam dui
+                            faucibus et. Sed ut ullamcorper ex. Integer in est sit amet mauris pharetra egestas vitae eu
+                            nisi. Nulla eget dictum ipsum. Nam sodales justo feugiat enim sollicitudin, at placerat ex
+                            cursus.
+                        </div>
+                    </div>
+                </div>
+                <div class="product_wrap">
+                    <div class="product_discount">
+                        <div class="offer_company">
+                            Offers
+                        </div>
+                        <div class="offer_desc">
+                            {% for rowOffer in dataoffer %}
+                            {% if session.email == Null %}
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn invert_button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                {{ rowOffer.discount_amount }}% OFF {{ rowOffer.discount_desc }}
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            lalala
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% else %}
+                            <form method="post" action="{{ url_for('send_msg') }}">
+                                <input class="form-control" name="inputAmount" value="{{ rowOffer.discount_amount }}"
+                                    type="hidden" autocomplete="off" required>
+                                <input class="form-control" name="inputDesc" value="{{ rowOffer.discount_desc }}"
+                                    type="hidden" autocomplete="off" required>
+                                <input class="form-control" name="inputCode" value="{{ rowOffer.discount_code }}"
+                                    type="hidden" autocomplete="off" required>
+                                <input class="form-control" name="inputLink" value="{{ rowOffer.discount_link }}"
+                                    type="hidden" autocomplete="off" required>
+                                <input class="form-control" name="inputEmail" value="{{ session.email }}" type="hidden"
+                                    autocomplete="off" required>
+                                <button type="submit" class="btn invert_button">{{ rowOffer.discount_amount }}% OFF {{
+                                    rowOffer.discount_desc }}</button>
+                            </form>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="offers" id="offer_feature">
+        <div class="offer_catalog_wrap">
+            <div class="offer_company" style="margin: 20px auto 30px auto;">
+                Featured Products
+            </div>
+        </div>
+        <div class="featured_wrap">
+            <div class="featured_flex">
+                <div class="featured_pict">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

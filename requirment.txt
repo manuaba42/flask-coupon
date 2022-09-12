@@ -1,0 +1,11 @@
+flask
+flask-mysql
+pymysql
+flask_mail
+flask_sqlalchemy
+flask_bcrypt
+flask_wtf
+wtforms
+wtforms-validators
+flask_bootstrap
+functools

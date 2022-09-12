@@ -1,0 +1,88 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="wrap">
+    <div class="headline">
+        <div class="headline_wrap">
+            <div class="headline_content">
+                <div class="headline_title">
+                    <h1>
+                        Make an impact through your local ethical brands
+                    </h1>
+                </div>
+                <div class="headline_tag">
+                    <p>
+                        A little space to enable a conscious living. social impact, fair trade, ethical fashion, and
+                        sustainbility through your local brand.
+                    </p>
+                </div>
+                <div class="headline_button">
+                    <div class="head_subutton">
+                        <button type="button" class="btn green_button">FIND BRAND</button>
+                    </div>
+                    <div class="head_subutton">
+                        <button type="button" class="btn invert_button">FIND BRAND</button>
+                    </div>
+                </div>
+            </div>
+            <div class="headline_logo">
+                <img src="../static/pict/webcam.png" alt="pict_headline">
+            </div>
+        </div>
+    </div>
+    <div class="offers">
+        <div class="offers_head">
+            <div class="offers_tag">
+                Today's Exclusive Offers
+            </div>
+            <div class="offers_find">
+                find out more <i class="bi bi-arrow-right"></i>
+            </div>
+        </div>
+        <div class="offer_catalog_wrap">
+            {% for row in data %}
+            <div class="offer_catalog">
+                <div class="offer_pict">
+                    <img src="../static/pict/duffle.jpg" alt="duffle">
+                </div>
+                <div class="offer_company" style="text-transform: capitalize">
+                    {{ row.name_brand }}
+                </div>
+                <div class="offer_desc">
+                    {{ row.tagline }}
+                </div>
+                <div class="offer_coupon">
+                    <a href="/product/{{ row.id }}">
+                        <button type="button" class="btn invert_button">DISCOUNT</button>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    <!-- <div class="headline" style="padding: 50px 90px 50px 90px;">
+        <div class="offers_head">
+            <div class="offers_tag">
+                Explore Impactful Local Brands
+            </div>
+            <div class="offers_find">
+                explore <i class="bi bi-arrow-right"></i>
+            </div>
+        </div>
+        <div class="offer_catalog_wrap" id="explore_grid">
+            <div class="explore_wrap">
+                <div class="explore_box">
+                    a
+                </div>
+                <div class="explore_box">
+                    b
+                </div>
+            </div>
+            <div class="explore_wrap">
+                c
+            </div>
+        </div> -->
+    </div>
+</div>
+
+{% endblock %}

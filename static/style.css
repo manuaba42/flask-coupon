@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,500;0,700;1,400&display=swap');
+
+/* body */
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+/* header */
+.head_bar{
+    display: flex;
+    width: auto;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.logo{
+    position: relative;
+    left: 40px;
+}
+
+.logo img{
+    width: 130px;
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    top: 43px;
+    right: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #68B3A0;
+}
+
+.submenu{
+    margin-left: 40px;
+}
+
+.submenu_button{
+    position: relative;
+    bottom: 10px;
+}
+
+/* custom button */
+.green_button{
+    padding: 10px;
+    background-color: #68B3A0;
+    color: white;
+}
+
+.invert_button{
+    padding: 10px;
+    border: 1px solid #68B3A0;
+    background-color: white;
+    color: #68B3A0;
+}
+
+/* footer */
+footer{
+    padding: 10px 40px 50px 40px;
+    background-color: #42463E;
+    color: white;
+}
+
+.foot_wrap{
+    display: flex;
+}
+
+.foot_row{
+    margin: 0px 5% 0px 5%;
+}
+
+.foot_menu_title{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.foot_menu img{
+    width: 200px;
+    filter: brightness(0) invert(1);
+}
+
+.foot_menu{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+
+/* headline home page */
+.headline{
+    margin: 0px;
+    height: 500px;
+    background-color: #FCFCF9;
+    padding: 50px;
+}
+
+.headline_wrap{
+    display: flex;
+    margin: auto;
+    width: 78%;
+    padding: 50px;
+}
+
+.headline_title, .headline_tag{
+    width: 600px;
+}
+
+.headline_title h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.headline_logo{
+    margin-left: 150px;
+}
+
+.headline_logo img{
+    height: 300px;
+}
+
+.headline_button{
+    margin-top: 20px;
+    display: flex;
+}
+
+.head_subutton{
+    margin-right: 30px;
+}
+
+.head_subutton button{
+    padding: 5px 25px 5px 25px;
+    font-size: 12px;
+}
+
+
+/*  */
+.offers{
+    margin: 0px;
+    height: 500px;
+    padding: 50px 90px 50px 90px;
+}
+
+.offers_head{
+    display: flex;
+}
+
+.offers_find{
+    position: absolute;
+    right: 8%;
+}
+
+.offer_catalog_wrap{
+    display: flex;
+}
+
+.offer_catalog{
+    width: 280px;
+    height: 350px;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    margin: 10px 30px 10px 30px;
+}
+
+.offer_pict img{
+    width: 280px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.offer_company{
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 15px 10px 15px;
+}
+
+.offer_desc, .offer_coupon, .offer_coupon button{
+    font-size: 14px;
+    padding: 10px 15px 10px 15px;
+}
+
+.offer_coupon button{
+    padding: 8px 25px 8px 25px;
+}
+
+.offers_tag{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.offers_find{
+    color: #98C7AB;
+}
+
+#explore_grid{
+    display: flex;
+}
+
+.explore_box{
+    height: 110px;
+    border: 1px solid black;
+}

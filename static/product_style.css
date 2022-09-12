@@ -1,0 +1,76 @@
+.offer_catalog_wrap{
+    display: flex;
+}
+
+.offer_catalog{
+    background-color: #FCFCF9;
+    width: 320px;
+    height: 430px;
+    padding: 20px 15px 10px 15px;
+    /* box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3); */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.offer_pict{
+    margin-bottom: 25px;
+}
+
+.offer_desc{
+    padding: 0px 0px 0px 15px;
+}
+
+.product_wrap{
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.offer_company{
+    font-size: 22px;
+}
+
+.offer_catalog .offer_company{
+    text-transform: uppercase;
+}
+
+.product_about .offer_desc{
+    font-size: 16px;
+}
+
+.product_about .offer_company{
+    font-size: 28px;
+}
+
+.product_discount .offer_desc{
+    flex-wrap:nowrap;
+}
+
+.invert_button{
+    margin: 15px 15px 5px 0px;
+    width: 45%;
+}
+
+.featured_wrap{
+    /* margin: 0px 50px 150px 50px; */
+    margin: 0px auto 0px auto;
+
+}
+
+.featured_flex{
+    flex-wrap: nowrap;
+    /* margin: 0px auto 0px auto; */
+}
+
+/* .featured_pict{
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.featured_pict img{
+    width: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#offer_feature{
+    margin-bottom: 150px;
+}
